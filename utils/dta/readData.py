@@ -1,10 +1,13 @@
 import re
+import getpass
+
 def readData(fileName):
     """
     read .dta file.
     """
     data = []
-    f = open(fr"D:\Leo\git\MathQ with Dani\data\{fileName}.dta")
+    username = getpass.getuser()
+    f = open(fr"D:\{username}\git\MathQ with Dani\data\{fileName}.dta")
     fileContent = f.readlines()
     ok = 0
     p1 = re.compile("([#]\s[-][j]\s[#]\s).*[;]")
