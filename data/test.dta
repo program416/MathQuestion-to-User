@@ -1,0 +1,5 @@
+#config start;
+# -j # 이것이 바로 주석입니다.;
+# -j # #config start와 #config end는 꼭 필요합니다.;
+prt(--es);
+#config end;
