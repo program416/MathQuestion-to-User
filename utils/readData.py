@@ -4,24 +4,24 @@ def readData(fileName):
     read .dta file.
     """
     data = []
-    f = open(f"../../datas/{fileName}.dta")
+    f = open(fr"D:\Leo\git\MathQ with Dani\datas\{fileName}.dta")
     fileContent = f.readlines()
     ok = 0
-    for line in fileContent.split("\n"):
-        match line:
-            case "#config end":
-                ok = 0
-                break
-            case "#config start":
-                ok = 1
-            case re.match("([#]\s[-][j]\s[#]\s).*", line):
-                pass
-            case re.match("[p][r][t][(](.*)[)]", line):
+    p1 = re.compile("([#]\s[-][j]\s[#]\s).*")
+    p2 = re.compile("[p][r][t][(](.*)[)]")
+    for line in fileContent:
+        if line == "#config end":
+            ok = 0
+            break
+        elif line == "#config start":
+            ok = 1
+        elif p1.match(line):
+            pass
+        elif p2.match(line):
+            print(p2.sub("\g<1>", line))
+        else:
+            if ok == 1:
                 data.append(line)
-                print(re.sub("[p][r][t][(](.*)[)]", "\g<1>", line))
-            case _:
-                if ok == 1:
-                    data.append(line)
-                else:
-                    pass
+            else:
+                pass
     return '\n'.join(data)
