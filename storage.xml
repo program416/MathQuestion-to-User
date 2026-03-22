@@ -32,5 +32,9 @@
             </miniTier>
         </tier>
     </tiers>
+    <mytier>
+        <mytierLesson>0</mytierLesson>
+        <mytierScore>0</mytierScore>
+    </mytier>
 </xml>
     
