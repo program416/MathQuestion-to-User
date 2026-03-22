@@ -36,5 +36,10 @@
         <mytierLesson>0</mytierLesson>
         <mytierScore>0</mytierScore>
     </mytier>
+    <lessons_history>
+        <lesson no="0" score="0"/>
+        <lesson no="1" score="0"/>
+        <!--lesson 정보 이렇게 쌓아나감-->
+    </lessons_history>
 </xml>
     
