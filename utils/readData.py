@@ -19,6 +19,11 @@ def readData(fileName):
             pass
         elif p2.match(line):
             print(p2.sub("\g<1>", line))
+        elif line == "esteg --view":
+            print("""
+            program416 say's, coding is a life.
+            dani-Devofficial say's,
+""")
         else:
             if ok == 1:
                 data.append(line)
