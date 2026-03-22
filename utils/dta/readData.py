@@ -28,5 +28,3 @@ def readData(fileName):
             else:
                 pass
     return ''.join(data)
-
-readData("test")
