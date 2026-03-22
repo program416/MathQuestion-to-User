@@ -1,8 +1,36 @@
-<xml version=1.0 encoding="UTF-8"?>
-<tier>
-    <tierno>
-        <tierdata>Bronze</tierdata><!-- 예시 -->
-        <tierscore>50</tierscore><!-- 예시 -->
-    </tierno>
-</tier>
+<xml version="1.0" encoding="UTF-32">
+    <tiers>
+        <tier name="1">
+            <miniTier name="F">
+                <tierLesson>0</tierLesson>
+            </miniTier>
+            <miniTier name="E">
+                <tierLesson>4</tierLesson>
+            </miniTier>
+            <miniTier name="D">
+                <tierLesson>9</tierLesson>
+            </miniTier>
+            <miniTier name="C">
+                <tierLesson>14</tierLesson>
+            </miniTier>
+            <miniTier name="B">
+                <tierLesson>20</tierLesson>
+            </miniTier>
+            <miniTier name="A">
+                <tierLesson>27</tierLesson>
+            </miniTier>
+        </tier>
+        <tier name="2">
+            <miniTier name="bronze">
+                <tierScore>0</tierScore>
+            </miniTier>
+            <miniTier name="silver">
+                <tierScore>200</tierScore>
+            </miniTier>
+            <miniTier name="gold">
+                <tierScore>400</tierScore>
+            </miniTier>
+        </tier>
+    </tiers>
 </xml>
+    
