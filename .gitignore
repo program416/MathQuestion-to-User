@@ -1,0 +1,5 @@
+web/app.py
+web/setup.txt
+web/static
+web/templates
+web/instance
