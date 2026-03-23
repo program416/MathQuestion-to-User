@@ -78,15 +78,17 @@
 <h4>주 개발자는 주로 개발하는 언어를 기준으로 작성되었으며, <code>program416</code>은 HTML, CSS, JavaScript도 검토할 수 있습니다.</h4>
 
 ## 주요 디렉터리
-- `logics/`: 티어별 문제 로직
 - `utils/`: 데이터 처리 유틸리티
 - `web/`: 웹 화면 및 스타일
 - `data/`: 프로젝트 데이터 저장 영역
 - `README/`: README에 표시하는 이미지 리소스
 
+## 추천 문제 표출 기준
+/questionsdata 에 있는 lesson*.txt를 참조하여 랜덤으로 문제 생성.
+예시: lesson1.txt에 "n+n"이면 "{랜덤수}+{랜덤수}"로 생성
 </details>
 
-<details open>
+<details>
 <summary><strong>데이터 주고받기 과정</strong></summary>
 
 사용자 정보와 티어 데이터가 어떻게 문제 추천과 완료 처리까지 이어지는지 한눈에 볼 수 있도록 정리했습니다.
