@@ -2,33 +2,33 @@
     <tiers>
         <tier name="1">
             <miniTier name="F">
-                <tierLesson>0</tierLesson>
+                <needtierLesson>0</needtierLesson>
             </miniTier>
             <miniTier name="E">
-                <tierLesson>4</tierLesson>
+                <needtierLesson>4</needtierLesson>
             </miniTier>
             <miniTier name="D">
-                <tierLesson>9</tierLesson>
+                <needtierLesson>9</needtierLesson>
             </miniTier>
             <miniTier name="C">
-                <tierLesson>14</tierLesson>
+                <needtierLesson>14</needtierLesson>
             </miniTier>
             <miniTier name="B">
-                <tierLesson>20</tierLesson>
+                <needtierLesson>20</needtierLesson>
             </miniTier>
             <miniTier name="A">
-                <tierLesson>27</tierLesson>
+                <needtierLesson>27</needtierLesson>
             </miniTier>
         </tier>
         <tier name="2">
             <miniTier name="bronze">
-                <tierScore>0</tierScore>
+                <needtierScore>0</needtierScore>
             </miniTier>
             <miniTier name="silver">
-                <tierScore>200</tierScore>
+                <needtierScore>200</needtierScore>
             </miniTier>
             <miniTier name="gold">
-                <tierScore>400</tierScore>
+                <needtierScore>400</needtierScore>
             </miniTier>
         </tier>
     </tiers>
