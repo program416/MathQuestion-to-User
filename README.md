@@ -1,6 +1,7 @@
 # MathQuestion-to-User
 
 유저의 티어에 맞는 수학문제를 추천하는 프로젝트입니다.
+각자의 브랜치에서 작업한 뒤, pull requests를 열어서 main 브랜치에 올립니다.
 
 <details>
 <summary><strong>티어 정보</strong></summary>
