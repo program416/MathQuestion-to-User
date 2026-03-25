@@ -5,7 +5,7 @@
 각자의 브랜치에서 작업한 뒤, pull requests를 열어서 main 브랜치에 올립니다.<br>
 내가 만든 main을 향한 pull requests는 자신이 닫을 수 없습니다.<br>
 다른 사람의 브랜치를 가져올 수는 있지만, 수정하거나 삭제할 수 없습니다.<br>
-
+<br>
 <details>
 <summary><strong>티어 정보</strong></summary>
 
