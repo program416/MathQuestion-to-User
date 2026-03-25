@@ -1,0 +1,7 @@
+name: "new commit/push"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
