@@ -16,4 +16,4 @@ def serve_static(filename):
 
 if __name__ == '__main__':
     # host='0.0.0.0'을 추가하면 같은 와이파이를 쓰는 다른 기기에서도 접속 가능해요.
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
