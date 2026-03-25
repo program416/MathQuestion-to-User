@@ -1,6 +1,6 @@
 <xml version="1.0" encoding="utf-8">
-            <quiz needLesson="0">
-                <title>제목</title>
-                <content>문제</content>
-            </quiz>
+    <quiz needLesson="0">
+        <title>제목</title>
+        <content>문제</content>
+    </quiz>
 </xml>
