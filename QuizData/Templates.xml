@@ -1,14 +1,6 @@
 <xml version="1.0" encoding="utf-8">
-    <bigTier name="1">
-        <tier name="F">
             <quiz needLesson="0">
                 <title>제목</title>
                 <content>문제</content>
-                <answer>정답</answer>
-                <!--문제 맞추고 틀리고-->
-                <ifRight>1</ifRight>
-                <ifWrong>0</ifWrong>
             </quiz>
-        </tier>
-    </bigTier>
 </xml>
