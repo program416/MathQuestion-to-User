@@ -3,9 +3,7 @@
 유저의 티어에 맞는 수학문제를 추천하는 프로젝트입니다.<br>
 <details>
 <summary><strong>규칙</strong></summary>
-
-<summary><strong>규칙</strong></summary>
-</details>
+  
 ## ----규칙----<br>
 각자의 브랜치에서 작업한 뒤, pull requests를 열어서 main 브랜치에 올립니다.<br>
 내가 만든 main을 향한 pull requests는 자신이 닫을 수 없습니다.<br>
