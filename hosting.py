@@ -6,25 +6,66 @@ from gevent.pywsgi import WSGIServer
 from gevent import monkey
 monkey.patch_all()
 import os
-
-# frontend 폴더를 정적 파일 저장소로 설정합니다.
-app = Flask(__name__, static_folder='frontend')
+from functools import wraps
+app = Flask(__name__)
 socketio = SocketIO(app)
 csrf = CSRFProtect(app)
 db = SQLAlchemy(app)
-# 1. 기본 페이지 (index.html) 접속
+
+class role:
+    def __init__(self, name, rolenum):
+        self.name = name
+        self.rolenum = rolenum
+    def __lt__(self, other):
+        return self.rolenum > other.rolenum
+    def __le__(self, other):
+        return self.rolenum >= other.rolenum
+    def __eq__(self, other):
+        return self.rolenum == other.rolenum
+    def __repr__(self):
+        return f"role({self.name}, {self.rolenum})"
+    def __str__(self):
+        return self.name
+
+user = role("user", 0)
+logged_user = role("logged_user", 1)
+good_user = role("good_user", 2)
+vip = role("vip", 3)
+vvip = role("vvip", 4)
+vvvip = role("vvvip", 5)
+admin = role("admin", 6)
+owner = role("owner", 7)
+roles = {
+    "user":user,
+    "logged_user":logged_user,
+    "good_user":good_user,
+    "vip":vip,
+    "vvip":vvip,
+    "vvvip":vvvip,
+    "admin":admin,
+    "owner":owner
+}
+def role_required(required_role):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if "role" not in session or roles[session[f'{required_role}']] < required_role:
+                return "<h1 style=\"font-size:2rem; color:red;\">권한 부족</h1>", 403
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
 @app.route('/')
 def index():
-    return send_from_directory(app.static_folder, 'index.html')
+    session['role'] = 'user'
+    return render_template('index.html')
 
-# 2. 폴더 내의 모든 파일(이미지, JS, CSS 등)을 이름대로 불러오기
 @app.route('/<path:filename>')
 def serve_static(filename):
-    return send_from_directory(app.static_folder, filename)
+    return send_from_directory('static', filename)
 
 if __name__ == '__main__':
     import ssl
-    # host='0.0.0.0'을 추가하면 같은 와이파이를 쓰는 다른 기기에서도 접속 가능해요.
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     context.load_cert_chain("key/fullchain.pem", "key/privkey.pem")
     socketio.run(app, host='0.0.0.0', port=443, ssl_context=context)
