@@ -9,7 +9,7 @@ import os
 from functools import wraps
 app = Flask(__name__)
 socketio = SocketIO(app)
-csrf = CSRFProtect(app)
+CSRFProtect(app)
 db = SQLAlchemy(app)
 
 class role:
