@@ -1,4 +1,4 @@
-<xml version="1.0" encoding="UTF-32">
+<xml version="1.0" encoding="UTF-8">
     <tier tier="1-F">
         <desc>레슨을 0번 이상 진행하면 올라갈 수 있는 첫번째 티어입니다.</desc>
     </tier>
